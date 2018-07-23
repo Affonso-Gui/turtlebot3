@@ -1,0 +1,11 @@
+<launch>
+  <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+    <arg name="rtabmap_args" value="--delete_db_on_start --Vis/CorFlowMaxLevel 5 --Stereo/MaxDisparity 200"/>
+    <arg name="right_image_topic" value="/stereo_camera/right/image_rect_color"/>
+    <arg name="stereo" value="true"/>
+    <arg name="rtabmapviz" value="false"/>
+    <arg name="visual_odometry" value="false"/>
+    <arg name="odom_topic" value="/stereo_camera/odom"/>
+    <arg name="frame_id" value="base_link"/>
+  </include>
+</launch>
